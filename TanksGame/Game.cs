@@ -39,11 +39,11 @@ namespace TanksGame
         }
         private void SpawnRandomEnvil()
         {
-            for (int i = 0; i < 1; i++)
-            {
-            Global.EnemyOnMap.Add(new Enemy(new Vector2f(rnd.Next(-10000, 10000), rnd.Next(-10000, 10000))));
-            }
-            //Global.EnemyOnMap.Add(new Enemy(new Vector2f(rnd.Next(-1000, 1000), rnd.Next(-1000, 1000))));   
+            //for (int i = 0; i < 1; i++)
+            //{
+            //Global.EnemyOnMap.Add(new Enemy(new Vector2f(rnd.Next(-10000, 10000), rnd.Next(-10000, 10000))));
+            //}
+            Global.EnemyOnMap.Add(new Enemy(new Vector2f(rnd.Next(-1000, 1000), rnd.Next(-1000, 1000))));
         }
         private void SpawnMedicalChest()
         {

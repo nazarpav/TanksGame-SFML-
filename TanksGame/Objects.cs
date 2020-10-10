@@ -76,7 +76,7 @@ namespace TanksGame
             this.DAMEGE = DAMEGE;
             base._ObjectSprite.Rotation = Rotate;
             base._ObjectShape.Rotation = base._ObjectSprite.Rotation;
-            base._ObjectSprite.Scale = new Vector2f(Global.SCALE + 0.2f, Global.SCALE+0.2f);
+            base._ObjectSprite.Scale = new Vector2f(Global.SCALE + 0.2f, Global.SCALE + 0.2f);
             base._ObjectShape.Scale = base._ObjectSprite.Scale;
             Dir.X = (float)Math.Cos((Rotate - 90) * (float)Math.PI / 180f);
             Dir.Y = (float)Math.Sin((Rotate - 90) * (float)Math.PI / 180f);
@@ -145,7 +145,7 @@ namespace TanksGame
             base._ObjectShape.FillColor = new Color(20, 70, 120, 150);
             base._ObjectShape.OutlineColor = Color.Black;
             base._ObjectShape.OutlineThickness = 5;
-            ObjectSprite.Scale = new Vector2f(Global.SCALE/1.5f, Global.SCALE/1.5f);
+            ObjectSprite.Scale = new Vector2f(Global.SCALE / 1.5f, Global.SCALE / 1.5f);
             _ObjectShape.Scale = _ObjectSprite.Scale;
         }
 
@@ -169,13 +169,13 @@ namespace TanksGame
 
         public override void Action(Tank tank)
         {
-            if(tank.Type==BaseObjectType.player)
-            ((Player)tank).AddShell(  Global.random.Next(0,30),
-                                                    Global.random.Next(0, 25),
-                                                    Global.random.Next(0, 15),
-                                                    Global.random.Next(0, 10),
-                                                    Global.random.Next(0, 10)
-                                                    );
+            if (tank.Type == BaseObjectType.player)
+                ((Player)tank).AddShell(Global.random.Next(0, 30),
+                                                        Global.random.Next(0, 25),
+                                                        Global.random.Next(0, 15),
+                                                        Global.random.Next(0, 10),
+                                                        Global.random.Next(0, 10)
+                                                        );
         }
     }
     internal class Trap : OtherObject
@@ -235,19 +235,19 @@ namespace TanksGame
         public Player() : base(new Sprite(Content.HullTexture), new RectangleShape((Vector2f)Content.HullTexture.Size), BaseObjectType.player)
         {
             base.Health = Global.MAXHEALTHPLAYER;
-            LightCounterShell = 1000;
-            MediumCounterShell = 1000;
-            HeavyCounterShell = 1000;
-            GranadeCounterShell = 1000;
-            SniperCounterShell = 1000;
-            
-            base._ObjectSprite.Position = new Vector2f(0,200);
+            LightCounterShell = 1000000;
+            MediumCounterShell = 1000000;
+            HeavyCounterShell = 1000000;
+            GranadeCounterShell = 10000000;
+            SniperCounterShell = 1000000;
+
+            base._ObjectSprite.Position = new Vector2f(0, 200);
             base._ObjectShape.Position = base._ObjectSprite.Position;
             base._ObjectShape.FillColor = new Color(20, 20, 255, 80);
             base._ObjectShape.OutlineColor = Color.Black;
             base._ObjectShape.OutlineThickness = 5;
         }
-        public void AddShell(int LightShell,int MediumShell, int HeavyShell, int GranadeShell, int SniperShell)
+        public void AddShell(int LightShell, int MediumShell, int HeavyShell, int GranadeShell, int SniperShell)
         {
             if (LightShell >= 0 && MediumShell >= 0 && HeavyShell >= 0 && GranadeShell >= 0 && SniperShell >= 0)
             {
@@ -315,7 +315,7 @@ namespace TanksGame
         {
             if (Health <= 0) { Global.GameOver = true; return; }
             if (Health > Global.MAXHEALTHPLAYER)
-                Health = Global.MAXHEALTHPLAYER; 
+                Health = Global.MAXHEALTHPLAYER;
             _gunSprite.Rotation = ((MathF.Atan2(Global.MousePosition.Y - base.ObjectSprite.Position.Y, Global.MousePosition.X - base.ObjectSprite.Position.X)) * 180f / MathF.PI) + 90;
             HullRotated += HullRotate;
             if (HullRotated > 360) HullRotated = 0;
@@ -350,14 +350,14 @@ namespace TanksGame
         private Random rnd;
         public Enemy(Vector2f Position) : base(new Sprite(Content.HullTexture), new RectangleShape((Vector2f)Content.HullTexture.Size), BaseObjectType.enemy)
         {
-            base.Health = 80;
+            base.Health = 60;
             HealthRect = new RectangleShape(new Vector2f(10, Health));
             HealthRect.FillColor = Color.Green;
             HealthRect.OutlineColor = Color.Black;
             HealthRect.OutlineThickness = 3;
-            HealthRect.Origin = new Vector2f(5,Health/2);
+            HealthRect.Origin = new Vector2f(5, Health / 2);
             clockShot = new Clock();
-            base.ObjectSprite.Position = Position;
+            base.ObjectSprite.Position = new Vector2f(Global.random.Next(0, 200), Global.random.Next(0, 200));
             base.ObjectSprite.Color = new Color(255, 0, 0, 255);
             _gunSprite.Color = base.ObjectSprite.Color;
 
@@ -417,8 +417,8 @@ namespace TanksGame
             base._ObjectShape.Rotation = base.ObjectSprite.Rotation;
             _dir.X = (float)Math.Cos((HullRotated - 90) * (float)Math.PI / 180f);
             _dir.Y = (float)Math.Sin((HullRotated - 90) * (float)Math.PI / 180f);
-            if ((base.ObjectSprite.Position + Speed * _dir).X < Global.MAPSIZEX / 2 && (base.ObjectSprite.Position + Speed * _dir).X > -Global.MAPSIZEX / 2
-                && (base.ObjectSprite.Position + Speed * _dir).Y < Global.MAPSIZEY / 2 && (base.ObjectSprite.Position + Speed * _dir).Y > -Global.MAPSIZEY / 2
+            if ((base.ObjectSprite.Position + Speed * _dir).X < Global.MAPSIZEX/2 && (base.ObjectSprite.Position + Speed * _dir).X > -Global.MAPSIZEX/2
+                && (base.ObjectSprite.Position + Speed * _dir).Y < Global.MAPSIZEY /2&& (base.ObjectSprite.Position + Speed * _dir).Y > -Global.MAPSIZEY/2
                 )
             {
                 base.ObjectSprite.Position += Speed * _dir;
@@ -427,7 +427,7 @@ namespace TanksGame
             }
             HealthRect.Size = new Vector2f(10, Health);
             HealthRect.Position = _ObjectSprite.Position;
-            HealthRect.Rotation = _ObjectSprite.Rotation+90;
+            HealthRect.Rotation = _ObjectSprite.Rotation + 90;
             Track.Update(base.ObjectSprite.Position, base.ObjectSprite.Rotation, (base.ObjectSprite.Position != base.ObjectSprite.Position + Speed * _dir || base.ObjectSprite.Rotation != HullRotated + HullRotate));
             if (counterAnimationShot++ == 3)
             {

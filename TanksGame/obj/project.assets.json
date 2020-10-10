@@ -824,23 +824,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\назар\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\ROOT\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\назар\\Desktop\\TanksGame\\TanksGame\\TanksGame.csproj",
+      "projectUniqueName": "F:\\InDevelop\\TanksGame\\TanksGame\\TanksGame.csproj",
       "projectName": "TanksGame",
-      "projectPath": "C:\\Users\\назар\\Desktop\\TanksGame\\TanksGame\\TanksGame.csproj",
-      "packagesPath": "C:\\Users\\назар\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\назар\\Desktop\\TanksGame\\TanksGame\\obj\\",
+      "projectPath": "F:\\InDevelop\\TanksGame\\TanksGame\\TanksGame.csproj",
+      "packagesPath": "C:\\Users\\ROOT\\.nuget\\packages\\",
+      "outputPath": "F:\\InDevelop\\TanksGame\\TanksGame\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\назар\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ROOT\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -883,12 +879,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.0.1, 3.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.0.3, 3.0.3]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

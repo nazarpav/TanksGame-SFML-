@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "GPCTXBboKMKIVrooXpuU291ECjFOul3UJn01Abf1G7FoMu+MmsFnbyz8wcQGUbunaoMXGzcKlE1et9zmgFaaAA==",
+  "success": true,
+  "projectFilePath": "F:\\InDevelop\\TanksGame\\TanksGame\\TanksGame.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ROOT\\.nuget\\packages\\box2d\\2.3.0\\box2d.2.3.0.nupkg.sha512",
+    "C:\\Users\\ROOT\\.nuget\\packages\\csfml\\2.5.0\\csfml.2.5.0.nupkg.sha512",
+    "C:\\Users\\ROOT\\.nuget\\packages\\sfml.audio\\2.5.0\\sfml.audio.2.5.0.nupkg.sha512",
+    "C:\\Users\\ROOT\\.nuget\\packages\\sfml.graphics\\2.5.0\\sfml.graphics.2.5.0.nupkg.sha512",
+    "C:\\Users\\ROOT\\.nuget\\packages\\sfml.net\\2.5.0\\sfml.net.2.5.0.nupkg.sha512",
+    "C:\\Users\\ROOT\\.nuget\\packages\\sfml.system\\2.5.0\\sfml.system.2.5.0.nupkg.sha512",
+    "C:\\Users\\ROOT\\.nuget\\packages\\sfml.window\\2.5.0\\sfml.window.2.5.0.nupkg.sha512",
+    "C:\\Users\\ROOT\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\ROOT\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\ROOT\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
+    "C:\\Users\\ROOT\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

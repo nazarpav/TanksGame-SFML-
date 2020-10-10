@@ -52,10 +52,10 @@ namespace TanksGame
         public const int MAPSCALE = 50;
 
         public const float SCALE = 1f;
-        public const float SPEEDTANKFORWARD = 4;
+        public const float SPEEDTANKFORWARD = 20;
         public const float SPEEDTANKBACKWARD = 3;
         public const float SPEEDTANKROTATE = 1;
-        public const int MAXHEALTHPLAYER = 150000; 
+        public const int MAXHEALTHPLAYER = 150000000; 
 
         public const int LIGHTHELLSPEED = 48;
         public const int LIGHTSHELLDAMAGE = 10;
@@ -66,10 +66,10 @@ namespace TanksGame
         public const int HEAVYSHELLSPEED = 32;
         public const int HEAVYSHELLDAMAGE = 50;
 
-        public const int GRANADESHELLSPEED = 20;
-        public const int GRANADESHELLDAMAGE = 90;
+        public const int GRANADESHELLSPEED = 120;
+        public const int GRANADESHELLDAMAGE = 100;
 
-        public const int SNIPERSHELLSPEED = 64;
+        public const int SNIPERSHELLSPEED = 180;
         public const int SNIPERSHELLDAMAGE = 70;
 
         public const uint SCREENWIDTH=1920;

@@ -14,10 +14,10 @@ namespace TanksGame
         {
             win = new RenderWindow(new VideoMode(Global.SCREENWIDTH, Global.SCREENHEIGHT), "Tank GAME"
                , Styles.Fullscreen);
-            win.SetFramerateLimit(120);
-           // win.SetKeyRepeatEnabled(false);
+            win.SetFramerateLimit(80);
+            win.SetKeyRepeatEnabled(false);
 
-            
+
             game = new Game(win);
         }
 
